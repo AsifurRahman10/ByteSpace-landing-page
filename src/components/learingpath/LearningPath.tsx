@@ -34,7 +34,7 @@ export const LearningPath = () => {
     }
   ]
   return (
-    <div className='text-center container-page'>
+    <div className='text-center container-page mt-10 sm:mt-0'>
       <h1 className='text-4xl font-semibold'>
         Explore Diverse Learning Paths at Bytespace
       </h1>
@@ -47,7 +47,7 @@ export const LearningPath = () => {
       </p>
 
       {/* card  */}
-      <div className='flex my-16 gap-8 justify-center items-center'>
+      <div className='flex flex-col sm:flex-row my-8 sm:my-16 gap-8 justify-center items-center'>
         {categories.map((cat, idx) => (
           <CategoryCard
             title={cat.title}
@@ -70,7 +70,7 @@ const CategoryCard = ({ title, icon }: CategoryCardProps) => {
     <article
       className='
         flex
-        aspect-square
+        sm:aspect-square
         w-full
         flex-col
         items-center
@@ -80,7 +80,8 @@ const CategoryCard = ({ title, icon }: CategoryCardProps) => {
         border-[#D9D9D9]
         bg-white
         px-3
-        py-3
+        py-6
+        sm:py-3
         transition-all
         duration-200
         hover:-translate-y-1
