@@ -7,7 +7,7 @@ import company5 from '../../../public/images/company/company5.png'
 
 const CompanyBanner = () => {
   return (
-    <div className='min-h-48 bg-neutral-50 flex flex-col sm:flex-row gap-4 sm:gap-16 justify-center items-center'>
+    <div className='min-h-48 bg-neutral-50 py-5 sm:py-0 grid grid-cols-2 place-items-center gap-6 px-6 lg:flex lg:flex-row lg:justify-center lg:gap-16 lg:px-0'>
       <Image
         src={company1}
         alt='demo-company-1'
@@ -37,6 +37,7 @@ const CompanyBanner = () => {
         alt='demo-company-1'
         width={167}
         height={41}
+        className='col-span-2 lg:col-span-auto'
       />
     </div>
   )

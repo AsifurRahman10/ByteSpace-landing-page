@@ -12,14 +12,14 @@ import coneWhite from '../../../public/images/hero/Cone_white.png'
 
 const HeroPage = () => {
   return (
-    <div className='relative isolate flex h-dvh flex-col overflow-hidden bg-brand-blue hero-grid'>
+    <div className='relative isolate flex h-fit sm:h-dvh flex-col overflow-hidden bg-brand-blue hero-grid'>
       <Navbar />
 
       {/* banner content */}
 
-      <section className='relative flex-1'>
-        <div className='relative z-10 px-5 pt-[clamp(1rem,5vh,2.5rem)]  '>
-          <h1 className='mx-auto mt-0 max-w-4xl text-center text-[clamp(2.5rem,5.2vw,4.5rem)] leading-[1.05] font-semibold text-background'>
+      <section className='relative flex-none md:flex-1'>
+        <div className='relative z-10 px-5 ms:pt-[clamp(1rem,5vh,2.5rem)]  '>
+          <h1 className='mx-auto mt-6 sm:mt-0 max-w-4xl text-center text-[clamp(2.5rem,5.2vw,4.5rem)] leading-[1.05] font-semibold text-background'>
             Get Access to Hundreds Courses Available
           </h1>
 
@@ -93,7 +93,7 @@ const HeroPage = () => {
           className='pointer-events-none absolute left-[4%] bottom-[6%] z-0 hidden h-auto w-[clamp(9rem,18vw,22rem)] max-w-none select-none md:block'
         />
 
-        <div className='pointer-events-none absolute inset-x-0 bottom-0 z-0 h-[min(42vh,24rem)]'>
+        <div className='pointer-events-none relative sm:mt-8 h-55 w-full md:absolute md:inset-x-0 md:bottom-0 md:mt-0 md:h-[min(42vh,24rem)]'>
           {/* Green background ellipse */}
           <Image
             src={ellipse7}
