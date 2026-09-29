@@ -159,9 +159,9 @@ const FeaturePage = () => {
               <p className='font-medium whitespace-nowrap'>Year to Date </p>
               <p className='text-[10px]'>2023</p>
               <h5 className='text-2xl font-semibold mt-2'>$1,200.38</h5>
-              <div className='mt-2 h-2 overflow-hidden rounded-full bg-[#F6F6F6]'>
-                <div className='h-full w-[55%] rounded-full bg-primary' />
-              </div>
+              <p className='text-[10px] font-medium bg-primary text-neutral-950 rounded-3xl w-fit px-2 py-1 mt-2'>
+                +12$
+              </p>
             </div>
           </div>
 
@@ -181,9 +181,6 @@ const FeaturePage = () => {
       object-contain
     '
           />
-
-          {/* Learning progress - FRONT */}
-          <LearningCard />
         </div>
       </div>
     </div>
