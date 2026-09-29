@@ -1,3 +1,11 @@
+import CompanyBanner from '@/components/company/CompanyBanner'
+import HeroPage from '../components/hero/HeroPage'
+
 export default function Page() {
-  return <h1>Hello, Next.js!</h1>;
+  return (
+    <>
+      <HeroPage />
+      <CompanyBanner />
+    </>
+  )
 }
