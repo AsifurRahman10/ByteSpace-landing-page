@@ -40,7 +40,7 @@ export function Navbar() {
   ]
 
   return (
-    <header className='sticky top-0 z-50 font-sans'>
+    <header className='relative top-0 z-50 font-sans'>
       <div className='container-page flex h-16 items-center justify-between gap-4 lg:h-20'>
         <Logo className={focusRing} />
 
