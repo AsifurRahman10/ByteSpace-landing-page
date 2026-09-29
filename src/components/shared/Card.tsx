@@ -1,5 +1,10 @@
 import Image, { StaticImageData } from 'next/image'
-
+import starIcon from '../../../public/images/skills/icon/star.svg'
+import signalIcon from '../../../public/images/skills/icon/signal.svg'
+import avatar_1 from '../../../public/images/skills/avatar_1.png'
+import avatar_2 from '../../../public/images/skills/avatar_2.png'
+import avatar_3 from '../../../public/images/skills/avatar_3.png'
+import avatar_4 from '../../../public/images/skills/avatar_4.png'
 interface CourseCardProps {
   title: string
   creator: string
@@ -43,14 +48,6 @@ const CourseCard = ({
               {item}
             </span>
           ))}
-
-          {/* <span className='rounded-full bg-white/60 px-2.5 py-1 text-[10px] text-neutral-700 backdrop-blur-sm'>
-            {duration}
-          </span>
-
-          <span className='rounded-full bg-white/60 px-2.5 py-1 text-[10px] text-neutral-700 backdrop-blur-sm'>
-            {comments}
-          </span> */}
         </div>
       </div>
 
@@ -58,30 +55,32 @@ const CourseCard = ({
       <div className='pt-3'>
         {/* Title + rating */}
         <div className='flex items-center justify-between gap-2'>
-          <h3 className='min-w-0 truncate text-[16px] font-semibold text-neutral-950'>
+          <h3 className='min-w-0 truncate text-xl font-semibold text-neutral-950'>
             {title}
           </h3>
 
-          <div className='flex shrink-0 items-center gap-1 text-sm text-neutral-500'>
+          <div className='flex shrink-0 items-center gap-1 text-lg text-neutral-700'>
             <span>{rating}</span>
-            <span className='text-[#C8C8C8]'>★</span>
+            <Image
+              src={starIcon}
+              alt='icon'
+            />
           </div>
         </div>
 
         {/* Creator */}
-        <p className='mt-0.5 text-[11px] text-neutral-500'>
-          by <span className='text-blue-600'>{creator}</span>
+        <p className='mt-0.5 text-[12px] text-neutral-700'>
+          by <span className='text-secondary'>{creator}</span>
         </p>
 
         {/* Bottom metadata */}
-        <div className='mt-3 flex items-center justify-between gap-2'>
+        <div className='mt-3 flex items-center gap-4'>
           {/* Level */}
-          <div className='flex items-center gap-1.5 rounded-full bg-[#F5F5F5] px-3 py-1.5 text-[11px] text-neutral-600'>
-            <span className='flex items-end gap-[2px]'>
-              <span className='h-2 w-[2px] bg-neutral-500' />
-              <span className='h-3 w-[2px] bg-neutral-500' />
-              <span className='h-4 w-[2px] bg-neutral-500' />
-            </span>
+          <div className='flex items-center font-medium rounded-3xl bg-neutral-50 px-3 py-1.5 text-xs text-neutral-600'>
+            <Image
+              src={signalIcon}
+              alt='signal'
+            />
 
             <span>{level}</span>
           </div>
@@ -89,24 +88,44 @@ const CourseCard = ({
           {/* Students */}
           <div className='flex items-center'>
             <div className='flex -space-x-2'>
-              {['1', '2', '3', '4'].map((avatar) => (
+              {/* {[].map((avatar) => (
                 <div
                   key={avatar}
                   className='size-7 rounded-full border-2 border-white bg-neutral-300'
                 />
-              ))}
-            </div>
+              ))} */}
 
-            <span className='relative z-10 -ml-1 flex size-7 items-center justify-center rounded-full border-2 border-white bg-lime-300 text-[10px] font-medium text-neutral-900'>
-              26+
-            </span>
+              <div className='flex shrink-0 items-center'>
+                <div className='flex -space-x-2'>
+                  {[avatar_1, avatar_2, avatar_3, avatar_4].map(
+                    (avatar, index) => (
+                      <div
+                        key={index}
+                        className='relative size-8 shrink-0 overflow-hidden rounded-full border-2 border-white'>
+                        <Image
+                          src={avatar}
+                          alt='Student avatar'
+                          fill
+                          sizes='32px'
+                          className='object-cover'
+                        />
+                      </div>
+                    )
+                  )}
+
+                  <div className='relative z-10 flex size-8 shrink-0 items-center justify-center rounded-full bg-[#D4FB20] text-xs font-medium text-neutral-950'>
+                    26+
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Price */}
         <div className='mt-3'>
-          <span className='text-xl font-semibold text-blue-600'>{price}</span>
-          <span className='text-[10px] text-neutral-500'>/lifetime</span>
+          <span className='text-xl font-semibold text-secondary'>{price}</span>
+          <span className='text-xs text-neutral-700'>/lifetime</span>
         </div>
       </div>
     </article>

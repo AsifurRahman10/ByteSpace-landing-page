@@ -69,7 +69,7 @@ const SkillsPage = () => {
     },
     {
       id: 4,
-      title: 'Balancing Productivity and Life',
+      title: 'Balancing Productivity and Self-Care',
       creator: 'purepearl studio',
       image: skill4,
       rating: 4.5,
