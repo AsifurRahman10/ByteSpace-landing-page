@@ -107,7 +107,7 @@ const SkillsPage = () => {
 
   const [activeCategory, setActiveCategory] = useState('Featured')
   return (
-    <div className='my-16'>
+    <div className='my-4 sm:my-16'>
       <h1 className='text font-semibold text-[44px] text-center'>
         Discover Your Passion, <br /> Build Your Skills
       </h1>
@@ -119,7 +119,7 @@ const SkillsPage = () => {
 
       {/* skill selection */}
 
-      <section className='px-4 py-11'>
+      <section className='px-4 py-4 sm:py-11'>
         <div className='mx-auto flex max-w-6xl flex-wrap justify-center gap-3'>
           {categories.map((category) => {
             const isActive = activeCategory === category
@@ -155,7 +155,7 @@ const SkillsPage = () => {
 
       {/* card section */}
 
-      <section className='px-5 py-16 container-page'>
+      <section className='px-5 oy-6 sm:py-16 container-page'>
         <div className='grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3'>
           {courses.map((course) => (
             <CourseCard
