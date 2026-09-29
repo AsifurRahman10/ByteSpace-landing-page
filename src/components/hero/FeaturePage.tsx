@@ -2,6 +2,7 @@ import CourseCard from '@/components/shared/Card'
 import { courses } from '../../../public/dummyData/skillsData'
 import Image from 'next/image'
 import humanImage from '../../../public/images/hero/human.png'
+import LearningCard from '@/components/shared/LearningCard'
 
 const FeaturePage = () => {
   return (
@@ -54,6 +55,7 @@ const FeaturePage = () => {
       left-0
       top-0
       z-10
+      w-3/5
       
     '>
             <CourseCard {...courses[0]} />
@@ -63,8 +65,8 @@ const FeaturePage = () => {
           <Image
             src={humanImage}
             alt='human-image'
-            width={570}
-            height={540}
+            width={550}
+            height={510}
             priority
             className='
       absolute
@@ -78,31 +80,7 @@ const FeaturePage = () => {
           />
 
           {/* Learning progress - FRONT */}
-          <div
-            className='
-      absolute
-      right-0
-      top-40
-      z-30
-     
-      rounded-2xl
-      bg-white
-      px-5
-      py-5
-      shadow-sm
-    '>
-            <p className='text-sm font-medium text-neutral-800'>
-              Learning Progress
-            </p>
-
-            <p className='mt-2 text-5xl font-semibold leading-none text-neutral-900'>
-              55%
-            </p>
-
-            <div className='mt-5 h-2 overflow-hidden rounded-full bg-neutral-100'>
-              <div className='h-full w-[55%] rounded-full bg-primary' />
-            </div>
-          </div>
+          <LearningCard />
         </div>
       </div>
     </div>

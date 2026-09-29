@@ -44,7 +44,7 @@ const CourseCard = ({
           {[lessons, duration, comments].map((item) => (
             <span
               key={item}
-              className='rounded-full bg-white/60 px-2.5 py-1 text-[12px] font-medium text-neutral-700 backdrop-blur-sm'>
+              className='rounded-full bg-white/60 px-2.5 py-1 text-[12px] font-medium text-neutral-700 backdrop-blur-sm whitespace-nowrap'>
               {item}
             </span>
           ))}
