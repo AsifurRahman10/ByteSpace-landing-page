@@ -40,9 +40,9 @@ const TestimonialSection = () => {
         <div className='absolute bottom-[-22%] left-[-12%] h-140 w-140 rounded-full bg-[#003BE2] opacity-[0.22] blur-[140px]' />
       </div>
 
-      <div className='container-page relative z-10 flex flex-col gap-16 py-20'>
-        <div className='flex items-end justify-between gap-16'>
-          <h2 className='w-full  text-[44px] font-semibold leading-[1.2] text-neutral-950'>
+      <div className='container-page relative z-10 flex flex-col gap-6 sm:gap-16 py-10 sm:py-20'>
+        <div className='flex flex-col sm:flex-row items-end justify-between gap-4 sm:gap-16'>
+          <h2 className='w-full text-3xl sm:text-[44px] font-semibold leading-[1.2] text-neutral-950'>
             Discover What Our Community Is Saying
           </h2>
 
@@ -56,11 +56,14 @@ const TestimonialSection = () => {
         </div>
 
         {/* CARDS */}
-        <div className='grid grid-cols-3 items-start gap-10'>
-          {testimonials.map((item) => (
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-start gap-10'>
+          {testimonials.map((item, index) => (
             <div
               key={item.name}
-              className='flex flex-col rounded-3xl bg-white p-6'>
+              className={`
+        flex flex-col rounded-3xl bg-white p-6
+        ${index === testimonials.length - 1 ? 'sm:col-span-2 sm:mx-auto sm:w-1/2 md:col-span-1 md:mx-0 md:w-full' : ''}
+      `}>
               <Image
                 src={item.image}
                 alt={item.name}
