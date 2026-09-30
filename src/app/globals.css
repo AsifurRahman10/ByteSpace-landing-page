@@ -1,0 +1,183 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/font/Satoshi-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/font/Satoshi-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/font/Satoshi-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/font/Satoshi-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* =========================
+     Brand
+     ========================= */
+
+  --brand-blue: #003be2;
+  --brand-blue-dark: #071e5f;
+
+  --brand-lime: #cbfc01;
+  --brand-lime-dark: #6a8902;
+
+  /* =========================
+     Neutral
+     ========================= */
+
+  --neutral-50: #f5f5f6;
+  --neutral-100: #e5e6e8;
+  --neutral-200: #ced0d3;
+  --neutral-300: #abaeb5;
+  --neutral-400: #82868e;
+  --neutral-500: #666973;
+  --neutral-600: #585a62;
+  --neutral-700: #4b4c53;
+  --neutral-800: #424348;
+  --neutral-900: #3a3b3f;
+  --neutral-950: #242528;
+
+  /* =========================
+     Semantic
+     ========================= */
+
+  --background: #ffffff;
+  --foreground: #242528;
+
+  --muted: #666973;
+  --border: #e5e6e8;
+
+  --primary: #cbfc01;
+  --primary-foreground: #242528;
+
+  --secondary: #003be2;
+  --secondary-foreground: #ffffff;
+
+  /* =========================
+     Layout
+     ========================= */
+
+  --container-width: 1200px;
+  --grid-gutter: 40px;
+}
+
+/* =========================
+   Tailwind theme
+   ========================= */
+
+@theme {
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.25rem;
+  --radius-full: 9999px;
+}
+
+@theme inline {
+  --font-sans: 'Satoshi', ui-sans-serif, system-ui, sans-serif;
+
+  --font-heading: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+
+  --font-mono: ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  /* Brand */
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-blue-dark: var(--brand-blue-dark);
+  --color-brand-lime: var(--brand-lime);
+  --color-brand-lime-dark: var(--brand-lime-dark);
+
+  /* Neutral */
+  --color-neutral-50: var(--neutral-50);
+  --color-neutral-100: var(--neutral-100);
+  --color-neutral-200: var(--neutral-200);
+  --color-neutral-300: var(--neutral-300);
+  --color-neutral-400: var(--neutral-400);
+  --color-neutral-500: var(--neutral-500);
+  --color-neutral-600: var(--neutral-600);
+  --color-neutral-700: var(--neutral-700);
+  --color-neutral-800: var(--neutral-800);
+  --color-neutral-900: var(--neutral-900);
+  --color-neutral-950: var(--neutral-950);
+
+  /* Semantic */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+}
+
+@layer base {
+  body {
+    font-family: 'Satoshi', ui-sans-serif, system-ui, sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  ::selection {
+    background-color: var(--brand-lime);
+    color: var(--brand-blue-dark);
+  }
+}
+
+@layer utilities {
+  .hero-grid {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.13) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.13) 1px, transparent 1px);
+
+    background-size: 85px 85px;
+  }
+}
+
+@utility container-page {
+  width: 100%;
+  max-width: var(--container-width);
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 5vw, var(--grid-gutter));
+}
