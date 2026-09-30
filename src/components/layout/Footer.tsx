@@ -58,17 +58,17 @@ const Footer = () => {
                 type='email'
                 placeholder='Enter your email'
                 aria-label='Email address'
-                className='h-[52px] w-[376px] rounded-full border border-neutral-300 bg-transparent px-6 text-base text-neutral-900 outline-none placeholder:text-neutral-700 focus:border-secondary'
+                className='h-13 w-94 rounded-full border border-neutral-300 bg-transparent px-6 text-base text-neutral-900 outline-none placeholder:text-neutral-700 focus:border-secondary'
               />
 
               <button
                 type='submit'
-                className='h-[46px] cursor-pointer rounded-full bg-primary px-6 text-base font-medium text-neutral-950 transition-opacity hover:opacity-80'>
+                className='h-11.5 cursor-pointer rounded-full bg-primary px-6 text-base font-medium text-neutral-950 transition-opacity hover:opacity-80'>
                 Search
               </button>
             </form>
 
-            <p className='mt-8 max-w-[470px] text-xs leading-[19px] text-neutral-900'>
+            <p className='mt-8 max-w-117.5 text-xs leading-4.75 text-neutral-900'>
               By subscribing, you agree to our Privacy Policy and consent to
               receive updates from our company.
             </p>
