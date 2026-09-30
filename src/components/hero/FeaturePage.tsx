@@ -33,13 +33,13 @@ const FeaturePage = () => {
         <div className='absolute bottom-[-12%] right-[-18%] h-170 w-170 rounded-full bg-[#003BE2] opacity-[0.22] blur-[140px]' />
       </div>
 
-      <div className='container-page relative z-10 flex flex-col gap-12 py-16'>
+      <div className='container-page relative z-10 flex flex-col gap-12 py-12 sm:py-16'>
         {/* 1st card */}
-        <div className='flex gap-16'>
+        <div className='flex flex-col gap-8 lg:flex-row lg:gap-16'>
           {/* TEXT SECTION */}
-          <div className='flex flex-1 flex-col gap-10'>
-            <h1 className='text-[44px] font-semibold text-neutral-950'>
-              <span className='whitespace-nowrap'>
+          <div className='flex flex-1 flex-col gap-6 sm:gap-10'>
+            <h1 className='text-[clamp(2rem,4vw,2.75rem)] font-semibold text-neutral-950'>
+              <span className='lg:whitespace-nowrap'>
                 Your Path to Professional
               </span>{' '}
               <br />
@@ -54,7 +54,7 @@ const FeaturePage = () => {
               need.
             </p>
 
-            <div className='flex gap-14'>
+            <div className='flex flex-wrap gap-x-6 gap-y-4 sm:gap-x-10 lg:gap-14'>
               {[
                 {
                   value: '12K',
@@ -81,7 +81,7 @@ const FeaturePage = () => {
           </div>
 
           {/* IMAGE SECTION */}
-          <div className='relative flex-1'>
+          <div className='relative min-h-88 flex-1 sm:min-h-104 lg:min-h-0'>
             {/* Course card - BACK */}
             <div
               className='
@@ -98,7 +98,7 @@ const FeaturePage = () => {
               alt='shape_1'
               width={170}
               height={170}
-              className='z-50 top-10 -right-9 absolute'
+              className='absolute right-0 top-6 z-50 sm:right-0 sm:top-10 lg:-right-9'
             />
 
             {/* Human - MIDDLE */}
@@ -112,7 +112,8 @@ const FeaturePage = () => {
                 absolute
                 bottom-0
                 z-20
-                max-w-none
+                w-full
+                max-w-137.5
                 object-contain
               '
             />
@@ -123,10 +124,10 @@ const FeaturePage = () => {
         </div>
 
         {/* 2nd card */}
-        <div className='flex flex-row-reverse gap-10'>
+        <div className='flex flex-col gap-8 lg:flex-row-reverse lg:gap-10'>
           {/* TEXT SECTION */}
-          <div className='my-auto flex flex-1 flex-col gap-10'>
-            <h1 className='text-[44px] font-semibold text-neutral-950'>
+          <div className='my-auto flex flex-1 flex-col gap-6 sm:gap-10'>
+            <h1 className='text-[clamp(2rem,4vw,2.75rem)] font-semibold text-neutral-950'>
               Create & Manage Courses Easily.
             </h1>
 
@@ -167,13 +168,13 @@ const FeaturePage = () => {
               alt='girl-image'
               width={435}
               priority
-              className='relative left-20 z-40 -mb-18 block object-contain'
+              className='relative left-0 z-40 -mb-18 block max-w-full object-contain sm:left-8 lg:left-20'
             />
 
             <Image
               src={frame_2}
               alt='shape_2'
-              className='z-50 top-22 right-20 absolute'
+              className='absolute right-4 top-16 z-50 sm:right-10 sm:top-22 lg:right-20'
             />
 
             {/* Revenue card */}
