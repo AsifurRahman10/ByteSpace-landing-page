@@ -4,6 +4,8 @@ import Image from 'next/image'
 import humanImage from '../../../public/images/hero/human.png'
 import LearningCard from '@/components/shared/LearningCard'
 import girlImage from '../../../public/images/feature/girl.png'
+import HappyStudentCard from '@/components/shared/HappyStudentCard'
+import checkCircle from '../../../public/images/feature/icon/check.svg'
 
 const FeaturePage = () => {
   return (
@@ -86,56 +88,51 @@ const FeaturePage = () => {
       </div>
 
       {/* 2st card */}
-      <div className='flex flex-row-reverse gap-16'>
+      <div className='flex flex-row-reverse gap-10'>
         {/* text section */}
         <div className='flex flex-col gap-10 flex-1'>
           <h1 className='text-neutral-950 text-[44px] font-semibold'>
-            Your Path to Professional <br /> Growth Starts Here!
+            Create & Manage Courses Easily.
           </h1>
-          <p>
-            Explore our curated selection of courses tailored to enhance your
-            capabilities and accelerate your career journey. Whether you are
-            looking to sharpen specific skills, gain industry expertise, or
-            embark on a new career path entirely, we have the resources you
-            need.
+          <p className='text-neutral-700'>
+            <span className='font-medium text-neutral-950'>ByteSpace</span>{' '}
+            supports individuals or entities in the creation, publication, and
+            administration of educational courses.
           </p>
 
-          <div className='flex gap-14'>
+          <ul>
             {[
-              {
-                value: '12K',
-                label: 'Students'
-              },
-              {
-                value: '70+',
-                label: 'Courses'
-              },
-              {
-                value: '16',
-                label: 'Creators'
-              }
-            ].map((item) => (
-              <div key={item.label}>
-                <h3 className='text-secondary text-4xl font-medium'>
-                  {item.value}
-                </h3>
-                <p className='text-neutral-700 text-lg'>{item.label}</p>
-              </div>
+              'Share Your Expertise',
+              'Monetize Your Passion',
+              'Flexibility and Autonomy',
+              'Build a Community'
+            ].map((item, idx) => (
+              <li
+                key={idx}
+                className='flex items-center gap-2'>
+                <Image
+                  alt='check'
+                  src={checkCircle}
+                  width={18}
+                  height={18}
+                />
+                <span>{item}</span>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
         {/* image section */}
         <div className='relative flex-1'>
           {/* revenue card */}
           <div
             className='
-      absolute
-      left-0
-      top-8
-      z-10
-      w-3/5
+          absolute
+            left-0
+            top-8
+              z-10
+              w-3/5
       
-    '>
+                '>
             <div className='bg-secondary text-neutral-50 p-4 rounded-xl w-2/3'>
               <p className='font-medium'>Total Revenue</p>
               <p className='text-[10px]'>Total Revenue</p>
@@ -163,6 +160,12 @@ const FeaturePage = () => {
                 +12$
               </p>
             </div>
+          </div>
+
+          {/* happy card */}
+
+          <div className='absolute right-0 z-40 bottom-10'>
+            <HappyStudentCard />
           </div>
 
           {/* Human - MIDDLE */}
