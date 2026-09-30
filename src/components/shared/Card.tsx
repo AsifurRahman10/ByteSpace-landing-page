@@ -30,7 +30,7 @@ const CourseCard = ({
   price
 }: CourseCardProps) => {
   return (
-    <article className='group w-full rounded-3xl  border border-neutral-200 p-4 transition-shadow duration-200 hover:shadow-lg'>
+    <article className='group w-full rounded-3xl bg-white border border-neutral-200 p-4 transition-shadow duration-200 hover:shadow-lg'>
       {/* Image */}
       <div className='relative aspect-[1.7/1] overflow-hidden rounded-[14px]'>
         <Image

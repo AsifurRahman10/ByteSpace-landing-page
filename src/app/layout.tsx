@@ -2,7 +2,6 @@ import type { Viewport } from 'next'
 import { Poppins } from 'next/font/google'
 
 import './globals.css'
-import Footer from '@/components/layout/Footer'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -34,13 +33,7 @@ export default function RootLayout({
           Skip to content
         </a>
 
-        <main
-          id='main-content'
-          className='flex-1'>
-          {children}
-        </main>
-
-        <Footer />
+        {children}
       </body>
     </html>
   )
