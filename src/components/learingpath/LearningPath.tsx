@@ -35,15 +35,16 @@ export const LearningPath = () => {
   ]
   return (
     <div className='text-center container-page mt-10 sm:mt-0'>
-      <h1 className='text-4xl font-semibold'>
+      <h1 className='text-[clamp(2rem,5vw,2.25rem)] font-semibold'>
         Explore Diverse Learning Paths at Bytespace
       </h1>
 
       <p className='text-neutral-400 text-lg mt-4'>
         At Bytespace, we believe in empowering individuals through knowledge.
-        Our diverse range of courses spans various <br /> fields, ensuring
-        there&apos;s something for everyone. Unleash your potential and explore
-        our carefully curated categories.
+        Our diverse range of courses spans various{' '}
+        <br className='hidden sm:block' /> fields, ensuring there&apos;s
+        something for everyone. Unleash your potential and explore our carefully
+        curated categories.
       </p>
 
       {/* card  */}

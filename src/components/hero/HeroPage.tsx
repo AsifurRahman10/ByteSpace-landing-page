@@ -9,8 +9,7 @@ import frame2 from '../../../public/images/hero/Frame_2.png'
 import frame3 from '../../../public/images/hero/Frame_3.png'
 import cone from '../../../public/images/hero/Cone.svg'
 import coneWhite from '../../../public/images/hero/Cone_white.png'
-import HappyStudentCard from '@/components/shared/HappyStudentCard'
-import LearningCard from '@/components/shared/LearningCard'
+import triangle from '../../../public/images/hero/triangle.svg'
 
 const HeroPage = () => {
   return (
@@ -69,6 +68,14 @@ const HeroPage = () => {
           width={177}
           height={176}
           className='pointer-events-none absolute left-[14%] top-[43%] z-0 hidden h-auto w-[clamp(5rem,8vw,9rem)] max-w-none select-none md:block'
+        />
+        <Image
+          src={triangle}
+          alt=''
+          aria-hidden='true'
+          width={180}
+          height={180}
+          className='pointer-events-none absolute right-[10%] z-0 hidden h-auto  max-w-none select-none md:block'
         />
         <Image
           src={frame3}
