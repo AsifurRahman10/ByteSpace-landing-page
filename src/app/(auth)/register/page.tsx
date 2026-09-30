@@ -1,5 +1,5 @@
 import AuthCard from '@/components/Auth/AuthCard'
-import AuthForm from '@/components/Auth/AuthForm'
+import AuthForm, { AuthField } from '@/components/Auth/AuthForm'
 import AuthShell from '@/components/Auth/AuthShell'
 
 const fields: AuthField[] = [
