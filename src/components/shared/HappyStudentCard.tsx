@@ -8,9 +8,13 @@ import avatar_5 from '../../../public/images/feature/avatar_4.png'
 import avatar_6 from '../../../public/images/feature/avatar_5.png'
 import avatar_7 from '../../../public/images/feature/avatar_6.png'
 
-const HappyStudentCard = () => {
+const HappyStudentCard = ({ bgColor }: { bgColor: string }) => {
   return (
-    <div className='text-neutral-950 bg-background rounded-xl shadow p-4'>
+    <div
+      className='rounded-xl p-4 text-neutral-950 shadow'
+      style={{
+        backgroundColor: bgColor ?? 'var(--background)'
+      }}>
       <p className='font-medium'>Happy Students</p>
       <div className='text-[10px] flex gap-1 mb-2'>
         <span className='font-medium'>4.5</span>{' '}
