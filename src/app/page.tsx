@@ -3,6 +3,7 @@ import HeroPage from '../components/hero/HeroPage'
 import SkillsPage from '@/components/skills/SkillsPage'
 import { LearningPath } from '@/components/learingpath/LearningPath'
 import FeaturePage from '@/components/hero/FeaturePage'
+import CreatorBanner from '@/components/creatorBanner/CreatorBanner'
 
 export default function Page() {
   return (
@@ -12,6 +13,7 @@ export default function Page() {
       <SkillsPage />
       <LearningPath />
       <FeaturePage />
+      <CreatorBanner />
     </div>
   )
 }

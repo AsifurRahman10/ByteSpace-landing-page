@@ -7,7 +7,7 @@ import ellipse7 from '../../../public/images/hero/Ellipse_7.png'
 import frame from '../../../public/images/hero/Frame.png'
 import frame2 from '../../../public/images/hero/Frame_2.png'
 import frame3 from '../../../public/images/hero/Frame_3.png'
-import cone from '../../../public/images/hero/Cone.png'
+import cone from '../../../public/images/hero/Cone.svg'
 import coneWhite from '../../../public/images/hero/Cone_white.png'
 
 const HeroPage = () => {
@@ -76,13 +76,32 @@ const HeroPage = () => {
           height={332}
           className='pointer-events-none absolute right-[3%] bottom-[7%] z-0 hidden h-auto w-[clamp(8rem,14vw,18rem)] max-w-none select-none md:block'
         />
-        <Image
-          src={cone}
-          alt=''
+
+        <div
           aria-hidden='true'
-          width={213}
-          height={372}
-          className='pointer-events-none absolute right-[-2%] top-[16%] z-0 hidden h-auto w-[clamp(8rem,12vw,15rem)] max-w-none select-none md:block'
+          className='
+              pointer-events-none
+              absolute
+              right-[-2%]
+              top-[16%]
+              z-0
+              hidden
+              h-93
+              w-53.25
+              bg-[#CBFC01]
+              select-none
+              md:block
+  '
+          style={{
+            maskImage: `url(${cone.src})`,
+            WebkitMaskImage: `url(${cone.src})`,
+            maskRepeat: 'no-repeat',
+            WebkitMaskRepeat: 'no-repeat',
+            maskPosition: 'center',
+            WebkitMaskPosition: 'center',
+            maskSize: 'contain',
+            WebkitMaskSize: 'contain'
+          }}
         />
         <Image
           src={coneWhite}

@@ -47,7 +47,7 @@ export const LearningPath = () => {
       </p>
 
       {/* card  */}
-      <div className='flex flex-col sm:flex-row my-8 sm:my-16 gap-8 justify-center items-center'>
+      <div className='my-8 grid grid-cols-1 gap-8 sm:grid-cols-3 sm:my-16 lg:grid-cols-6'>
         {categories.map((cat, idx) => (
           <CategoryCard
             title={cat.title}
