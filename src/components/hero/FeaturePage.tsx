@@ -6,6 +6,10 @@ import LearningCard from '@/components/shared/LearningCard'
 import girlImage from '../../../public/images/feature/girl.png'
 import HappyStudentCard from '@/components/shared/HappyStudentCard'
 import checkCircle from '../../../public/images/feature/icon/check.svg'
+import frame_1 from '../../../public/images/feature/frame_1.png'
+// import frame_2 from '../../../public/images/feature/frame_2.png'
+
+import frame_2 from '../../../public/images/feature/Frame.svg'
 
 const FeaturePage = () => {
   return (
@@ -16,7 +20,7 @@ const FeaturePage = () => {
         {/* TOP LEFT — GREEN */}
         <div className='absolute left-[8%] top-[-12%] h-155 w-155 rounded-full bg-[#CBFC01] opacity-40 blur-[140px]' />
 
-        {/* TOP RIGHT — BLUE (very faint) */}
+        {/* TOP RIGHT — BLUE  */}
         <div className='absolute right-[-15%] top-[-10%] h-155 w-155 rounded-full bg-[#003BE2] opacity-[0.08] blur-[140px]' />
 
         {/* MIDDLE LEFT — BLUE */}
@@ -89,6 +93,13 @@ const FeaturePage = () => {
               '>
               <CourseCard {...courses[0]} />
             </div>
+            <Image
+              src={frame_1}
+              alt='shape_1'
+              width={170}
+              height={170}
+              className='z-50 top-10 -right-9 absolute'
+            />
 
             {/* Human - MIDDLE */}
             <Image
@@ -157,6 +168,12 @@ const FeaturePage = () => {
               width={435}
               priority
               className='relative left-20 z-40 -mb-18 block object-contain'
+            />
+
+            <Image
+              src={frame_2}
+              alt='shape_2'
+              className='z-50 top-22 right-20 absolute'
             />
 
             {/* Revenue card */}
