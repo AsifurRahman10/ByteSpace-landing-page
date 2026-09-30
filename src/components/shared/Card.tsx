@@ -5,6 +5,7 @@ import avatar_1 from '../../../public/images/skills/avatar_1.png'
 import avatar_2 from '../../../public/images/skills/avatar_2.png'
 import avatar_3 from '../../../public/images/skills/avatar_3.png'
 import avatar_4 from '../../../public/images/skills/avatar_4.png'
+import AvatarGroup from '@/components/shared/AvatarGroup'
 interface CourseCardProps {
   title: string
   creator: string
@@ -44,7 +45,7 @@ const CourseCard = ({
           {[lessons, duration, comments].map((item) => (
             <span
               key={item}
-              className='rounded-full bg-white/60 px-2.5 py-1 text-[12px] font-medium text-neutral-700 backdrop-blur-sm'>
+              className='rounded-full bg-white/60 px-2.5 py-1 text-[12px] font-medium text-neutral-700 backdrop-blur-sm whitespace-nowrap'>
               {item}
             </span>
           ))}
@@ -95,7 +96,12 @@ const CourseCard = ({
                 />
               ))} */}
 
-              <div className='flex shrink-0 items-center'>
+              <AvatarGroup
+                avatarArray={[avatar_1, avatar_2, avatar_3, avatar_4]}
+                count='26'
+              />
+
+              {/* <div className='flex shrink-0 items-center'>
                 <div className='flex -space-x-2'>
                   {[avatar_1, avatar_2, avatar_3, avatar_4].map(
                     (avatar, index) => (
@@ -117,7 +123,7 @@ const CourseCard = ({
                     26+
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
