@@ -31,11 +31,11 @@ export function Navbar() {
   const cta = [
     {
       label: 'Sign In',
-      href: '/signin'
+      href: '/login'
     },
     {
       label: 'Join Us',
-      href: '/signup'
+      href: '/register'
     }
   ]
 
