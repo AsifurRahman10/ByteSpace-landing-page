@@ -156,7 +156,7 @@ const FeaturePage = () => {
               alt='girl-image'
               width={435}
               priority
-              className='relative left-20 z-40 mb-[-72px] block object-contain'
+              className='relative left-20 z-40 -mb-18 block object-contain'
             />
 
             {/* Revenue card */}
