@@ -10,7 +10,7 @@ import shape_7 from '../../../public/images/hero/triangle.svg'
 
 const CreatorBanner = () => {
   return (
-    <section className='hero-grid relative isolate flex items-center justify-center overflow-hidden bg-brand-blue text-center py-20 text-neutral-50 px-2 sm:px-2'>
+    <section className='hero-grid relative isolate flex items-center justify-center overflow-hidden bg-brand-blue text-center py-8 sm:py-20 text-neutral-50 px-6 sm:px-2'>
       <Image
         src={shape_1}
         alt=''

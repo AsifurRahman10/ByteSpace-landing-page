@@ -10,6 +10,8 @@ import frame3 from '../../../public/images/hero/Frame_3.png'
 import cone from '../../../public/images/hero/Cone.svg'
 import coneWhite from '../../../public/images/hero/Cone_white.png'
 import triangle from '../../../public/images/hero/triangle.svg'
+import HappyStudentCard from '@/components/shared/HappyStudentCard'
+import LearningCard from '@/components/shared/LearningCard'
 
 const HeroPage = () => {
   return (

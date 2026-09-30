@@ -33,7 +33,7 @@ const FeaturePage = () => {
         <div className='absolute bottom-[-12%] right-[-18%] h-170 w-170 rounded-full bg-[#003BE2] opacity-[0.22] blur-[140px]' />
       </div>
 
-      <div className='container-page relative z-10 flex flex-col gap-12 py-12 sm:py-16'>
+      <div className='container-page relative z-10 flex flex-col gap-6 sm:gap-12 py-8 sm:py-16'>
         {/* 1st card */}
         <div className='flex flex-col gap-8 lg:flex-row lg:gap-16'>
           {/* TEXT SECTION */}
@@ -124,7 +124,7 @@ const FeaturePage = () => {
         </div>
 
         {/* 2nd card */}
-        <div className='flex flex-col gap-8 lg:flex-row-reverse lg:gap-10'>
+        <div className='flex flex-col gap-4 sm:gap-8 lg:flex-row-reverse lg:gap-10'>
           {/* TEXT SECTION */}
           <div className='my-auto flex flex-1 flex-col gap-6 sm:gap-10'>
             <h1 className='text-[clamp(2rem,4vw,2.75rem)] font-semibold text-neutral-950'>

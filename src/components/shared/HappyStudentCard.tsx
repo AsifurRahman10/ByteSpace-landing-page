@@ -8,7 +8,7 @@ import avatar_5 from '../../../public/images/feature/avatar_4.png'
 import avatar_6 from '../../../public/images/feature/avatar_5.png'
 import avatar_7 from '../../../public/images/feature/avatar_6.png'
 
-const HappyStudentCard = ({ bgColor }: { bgColor: string }) => {
+const HappyStudentCard = ({ bgColor }: { bgColor?: string }) => {
   return (
     <div
       className='rounded-xl p-4 text-neutral-950 shadow'
