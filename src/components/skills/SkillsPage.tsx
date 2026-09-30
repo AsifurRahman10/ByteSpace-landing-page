@@ -29,13 +29,15 @@ const SkillsPage = () => {
   const [activeCategory, setActiveCategory] = useState('Featured')
   return (
     <div className='my-4 sm:my-16'>
-      <h1 className='text font-semibold text-[44px] text-center'>
-        Discover Your Passion, <br /> Build Your Skills
+      <h1 className='px-5 text-center text-[clamp(2rem,5vw,2.75rem)] font-semibold'>
+        Discover Your Passion, <br className='hidden sm:block' /> Build Your
+        Skills
       </h1>
       <p className='text-neutral-400 text-lg mt-4 text-center'>
         At Bytespace Courses, we bring you closer to life-changing knowledge.
-        Explore a variety of courses across different <br /> fields, from
-        technology to the arts, and make a difference in your career and life.
+        Explore a variety of courses across different{' '}
+        <br className='hidden sm:block' /> fields, from technology to the arts,
+        and make a difference in your career and life.
       </p>
 
       {/* skill selection */}
