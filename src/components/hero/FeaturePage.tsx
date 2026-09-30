@@ -88,9 +88,9 @@ const FeaturePage = () => {
       </div>
 
       {/* 2st card */}
-      <div className='flex flex-row-reverse gap-10'>
+      <div className='flex flex-row-reverse gap-10 '>
         {/* text section */}
-        <div className='flex flex-col gap-10 flex-1'>
+        <div className='flex flex-col gap-10 flex-1 my-auto'>
           <h1 className='text-neutral-950 text-[44px] font-semibold'>
             Create & Manage Courses Easily.
           </h1>
@@ -116,74 +116,51 @@ const FeaturePage = () => {
                   width={18}
                   height={18}
                 />
-                <span>{item}</span>
+                <span className='text-lg font-medium'>{item}</span>
               </li>
             ))}
           </ul>
         </div>
         {/* image section */}
-        <div className='relative flex-1'>
-          {/* revenue card */}
-          <div
-            className='
-          absolute
-            left-0
-            top-8
-              z-10
-              w-3/5
-      
-                '>
-            <div className='bg-secondary text-neutral-50 p-4 rounded-xl w-2/3'>
+        <div className='relative shrink-0  flex-1 '>
+          <Image
+            src={girlImage}
+            alt='girl-image'
+            width={435}
+            priority
+            className='relative z-40 object-contain left-20'
+          />
+
+          {/* Revenue card */}
+          <div className='absolute left-0 top-8 z-30'>
+            <div className='w-60 rounded-xl bg-secondary p-4 text-neutral-50'>
               <p className='font-medium'>Total Revenue</p>
               <p className='text-[10px]'>Total Revenue</p>
-              <h5 className='text-2xl font-semibold mt-2'>$120.29</h5>
+              <h5 className='mt-2 text-2xl font-semibold'>$120.29</h5>
+
               <div className='mt-2 h-2 overflow-hidden rounded-full bg-[#F6F6F6]'>
                 <div className='h-full w-[55%] rounded-full bg-primary' />
               </div>
             </div>
           </div>
 
-          {/*  */}
-          <div
-            className='
-      absolute
-      left-0
-      bottom-30
-      z-10
-      
-    '>
-            <div className='bg-secondary text-neutral-50 p-4 rounded-xl '>
-              <p className='font-medium whitespace-nowrap'>Year to Date </p>
+          {/* Year to Date */}
+          <div className='absolute top-45 left-0 z-30'>
+            <div className='rounded-xl bg-secondary p-4 text-neutral-50'>
+              <p className='whitespace-nowrap font-medium'>Year to Date</p>
               <p className='text-[10px]'>2023</p>
-              <h5 className='text-2xl font-semibold mt-2'>$1,200.38</h5>
-              <p className='text-[10px] font-medium bg-primary text-neutral-950 rounded-3xl w-fit px-2 py-1 mt-2'>
+              <h5 className='mt-2 text-2xl font-semibold'>$1,200.38</h5>
+
+              <p className='mt-2 w-fit rounded-3xl bg-primary px-2 py-1 text-[10px] font-medium text-neutral-950'>
                 +12$
               </p>
             </div>
           </div>
 
-          {/* happy card */}
-
-          <div className='absolute right-0 z-40 bottom-10'>
+          {/* Happy students */}
+          <div className='absolute bottom-30 right-0 z-40'>
             <HappyStudentCard />
           </div>
-
-          {/* Human - MIDDLE */}
-          <Image
-            src={girlImage}
-            alt='girl-image'
-            width={435}
-            height={596}
-            priority
-            className='
-      absolute
-      left-20
-      
-      z-20
-      
-      object-contain
-    '
-          />
         </div>
       </div>
     </div>
