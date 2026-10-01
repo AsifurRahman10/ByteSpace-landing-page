@@ -5,39 +5,52 @@ import Link from 'next/link'
 
 import { Logo } from '@/components/layout/logo'
 import Image from 'next/image'
-import bagIcon from '../../../public/images/hero/icon/shopping_bag.svg'
 
 const focusRing =
   'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue'
 
+const mainNav = [
+  { label: 'Home', href: '/' },
+  { label: 'Courses', href: '/courses' },
+  { label: 'Creators', href: '/creators' }
+]
+
+const cta = [
+  { label: 'Sign In', href: '/login' },
+  { label: 'Join Us', href: '/register' }
+]
+
+const mobileNav = [...mainNav, ...cta]
+
+const desktopNavLink =
+  'rounded-full py-2 text-md text-neutral-50 transition-colors hover:text-primary/90'
+const desktopCtaLink =
+  'inline-flex items-center justify-center text-md text-neutral-50 transition-colors hover:text-primary/90'
+const mobileLink =
+  'rounded-lg px-3 py-3 text-base font-medium text-foreground transition-colors hover:bg-neutral-50'
+
+type NavLinkProps = {
+  href: string
+  className?: string
+  onClick?: () => void
+  children: React.ReactNode
+}
+
+function NavLink({ href, className, onClick, children }: NavLinkProps) {
+  return (
+    <Link
+      href={href}
+      onClick={onClick}
+      className={`${className ?? ''} ${focusRing}`}>
+      {children}
+    </Link>
+  )
+}
+
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-  const mainNav = [
-    {
-      label: 'Home',
-      href: '/'
-    },
-    {
-      label: 'Courses',
-      href: '/courses'
-    },
-    {
-      label: 'Creators',
-      href: '/creators'
-    }
-  ]
-
-  const cta = [
-    {
-      label: 'Sign In',
-      href: '/login'
-    },
-    {
-      label: 'Join Us',
-      href: '/register'
-    }
-  ]
+  const closeMenu = () => setIsMenuOpen(false)
 
   return (
     <header className='relative top-0 z-50 font-sans'>
@@ -50,30 +63,28 @@ export function Navbar() {
           <ul className='flex items-center gap-6'>
             {mainNav.map((item) => (
               <li key={item.href}>
-                <Link
+                <NavLink
                   href={item.href}
-                  className={`rounded-full text-neutral-50 py-2 text-md  transition-colors  hover:text-primary/90 ${focusRing}`}>
+                  className={desktopNavLink}>
                   {item.label}
-                </Link>
+                </NavLink>
               </li>
             ))}
           </ul>
         </nav>
 
         <div className='hidden lg:flex justify-center items-center gap-6'>
-          {cta.map((c) => {
-            return (
-              <Link
-                href={c.href}
-                key={c.href}
-                className={`inline-flex items-center justify-center text-md text-neutral-50  transition-colors hover:text-primary/90 ${focusRing}`}>
-                {c.label}
-              </Link>
-            )
-          })}
+          {cta.map((c) => (
+            <NavLink
+              key={c.href}
+              href={c.href}
+              className={desktopCtaLink}>
+              {c.label}
+            </NavLink>
+          ))}
 
           <Image
-            src={bagIcon}
+            src='/images/hero/icon/shopping_bag.svg'
             alt='Shopping bag'
             width={24}
             height={24}
@@ -100,40 +111,30 @@ export function Navbar() {
           <nav
             aria-label='Mobile'
             className='container-page flex flex-col gap-1 py-4'>
-            {/* Main navigation */}
-            {mainNav.map((item) => (
-              <Link
+            {/* Main navigation + CTA links */}
+            {mobileNav.map((item) => (
+              <NavLink
                 key={item.href}
                 href={item.href}
-                onClick={() => setIsMenuOpen(false)}
-                className={`rounded-lg px-3 py-3 text-base font-medium text-foreground transition-colors hover:bg-neutral-50 ${focusRing}`}>
+                onClick={closeMenu}
+                className={mobileLink}>
                 {item.label}
-              </Link>
-            ))}
-
-            {/* CTA links */}
-            {cta.map((c) => (
-              <Link
-                key={c.href}
-                href={c.href}
-                onClick={() => setIsMenuOpen(false)}
-                className={`rounded-lg px-3 py-3 text-base font-medium text-foreground transition-colors hover:bg-neutral-50 ${focusRing}`}>
-                {c.label}
-              </Link>
+              </NavLink>
             ))}
 
             {/* Shopping bag */}
-            <Link
+            <NavLink
               href='/cart'
-              onClick={() => setIsMenuOpen(false)}
-              className={`flex items-center gap-3 rounded-lg px-3 py-3 text-base font-medium text-foreground transition-colors hover:bg-neutral-50 ${focusRing}`}>
+              onClick={closeMenu}
+              className={`flex items-center gap-1${mobileLink}`}>
               <Image
-                src={bagIcon}
+                src='/images/hero/icon/shopping_bag.svg'
                 alt='Shopping bag'
                 width={24}
                 height={24}
+                className='brightness-30'
               />
-            </Link>
+            </NavLink>
           </nav>
         </div>
       )}

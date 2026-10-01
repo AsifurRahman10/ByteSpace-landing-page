@@ -1,7 +1,13 @@
+import type { Metadata } from 'next'
+
 import AuthCard from '@/components/Auth/AuthCard'
 import AuthForm, { AuthField } from '@/components/Auth/AuthForm'
 import AuthShell from '@/components/Auth/AuthShell'
 import SocialButtons from '@/components/Auth/SocialButtons'
+
+export const metadata: Metadata = {
+  title: 'Sign In'
+}
 
 const fields: AuthField[] = [
   {

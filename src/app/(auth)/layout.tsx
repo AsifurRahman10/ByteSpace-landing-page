@@ -1,6 +1,11 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import logo from '../../../public/images/auth/logo_sm.png'
+
+export const metadata: Metadata = {
+  description:
+    'Sign in to ByteSpace to keep learning, or create a free account to start exploring hundreds of courses.'
+}
 
 const AuthLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -11,7 +16,7 @@ const AuthLayout = ({ children }: { children: React.ReactNode }) => {
           aria-label='Home'
           className='absolute top-6'>
           <Image
-            src={logo}
+            src='/images/auth/logo_sm.png'
             alt='ByteSpace'
             width={30}
             height={30}

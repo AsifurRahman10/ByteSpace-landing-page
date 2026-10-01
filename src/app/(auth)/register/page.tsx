@@ -1,6 +1,12 @@
+import type { Metadata } from 'next'
+
 import AuthCard from '@/components/Auth/AuthCard'
 import AuthForm, { AuthField } from '@/components/Auth/AuthForm'
 import AuthShell from '@/components/Auth/AuthShell'
+
+export const metadata: Metadata = {
+  title: 'Create Account'
+}
 
 const fields: AuthField[] = [
   {

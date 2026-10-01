@@ -1,36 +1,106 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ByteSpace — Landing Page
 
-## Getting Started
+The marketing site for **ByteSpace**, a place where people learn new skills and creators
+publish courses. This repo is the landing page: a hero with a course search, a company strip,
+skill categories, learning paths, feature highlights, a "become a creator" banner, and
+testimonials — plus simple sign-in / sign-up screens.
 
-First, run the development server:
+It's built to be fast and easy to tweak. Everything is server-rendered by default, so it
+loads quickly and stays simple to reason about.
+
+## Tech stack
+
+- **Next.js 16** (App Router + Turbopack)
+- **React 19**
+- **TypeScript** (strict mode)
+- **Tailwind CSS v4**
+- **`next/image`** for all images
+- **pnpm** as the package manager
+
+Fonts: **Satoshi** (self-hosted from `public/font`) and **Poppins** (loaded via `next/font`).
+
+## Getting started
+
+You'll need Node.js and `pnpm`. Then:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) and you're in. The page hot-reloads as
+you edit.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command         | What it does                              |
+| --------------- | ----------------------------------------- |
+| `pnpm dev`      | Start the dev server                      |
+| `pnpm build`    | Create a production build                 |
+| `pnpm start`    | Run the production build                  |
+| `pnpm lint`     | Lint with ESLint                          |
+| `pnpm lint:fix` | Lint and auto-fix what it can             |
 
-## Learn More
+## Project structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├─ app/
+│  ├─ layout.tsx            # Root layout: fonts, metadata, skip link
+│  ├─ globals.css           # Design tokens + theme (Tailwind v4 @theme)
+│  ├─ (site)/               # The public marketing site
+│  │  ├─ layout.tsx         # Wraps pages with <main> + <Footer>
+│  │  └─ page.tsx           # The home page (composes all the sections)
+│  └─ (auth)/               # Login & register screens
+│     ├─ layout.tsx         # Shared blue auth shell + logo
+│     ├─ login/page.tsx
+│     └─ register/page.tsx
+├─ dummyData/               # Placeholder data (courses), imported by a few sections
+└─ components/
+   ├─ layout/               # Navbar, Footer, Logo
+   ├─ shared/               # Reusable bits: Button, CourseCard, AvatarGroup, etc.
+   ├─ hero/                 # Hero + feature sections
+   ├─ company/              # Company logo strip
+   ├─ skills/               # Skill category filter + course grid
+   ├─ learingpath/          # Learning path cards
+   ├─ creatorBanner/        # "Become a creator" CTA
+   ├─ testimonial/          # Testimonials
+   └─ Auth/                 # Auth form, card, shell, social buttons
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Routes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `/` — the landing page
+- `/login` — sign in
+- `/register` — create an account
 
-## Deploy on Vercel
+## Design system
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+All colors, radii, and fonts live in **one place**: `src/app/globals.css`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Colors are defined as CSS variables (`--brand-blue`, `--brand-lime`, `--neutral-*`,
+  `--primary`, …) and exposed to Tailwind through `@theme inline`, so you can use them as
+  normal utilities: `bg-primary`, `text-neutral-700`, `text-brand-blue`, etc.
+- `--container-width` and `--grid-gutter` drive the layout, wrapped in a handy
+  `container-page` utility that centers content and handles side padding everywhere.
+- Headings use Poppins via `--font-heading`; body text uses Satoshi.
+
+Change a token here and it updates across the whole site — that's the point.
+
+## Content & data
+
+Placeholder course data lives in `src/dummyData/skillsData.ts` and is currently imported by
+the skills grid, the feature section, and the auth showcase. Swap it for real data (or an
+API) whenever you're ready.
+
+## A couple of things worth knowing
+
+- The home page is assembled from section components in `src/app/(site)/page.tsx` — add,
+  remove, or reorder sections there.
+- Images use `next/image`. A few decorative SVGs are large; compressing them is an easy
+  performance win later.
+- The site is static and prerenders cleanly, so it deploys anywhere that runs Next.js
+  (Vercel is the zero-config option).
+
+That's it — have fun building. 🚀
+

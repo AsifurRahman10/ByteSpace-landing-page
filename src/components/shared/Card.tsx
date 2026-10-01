@@ -1,15 +1,9 @@
-import Image, { StaticImageData } from 'next/image'
-import starIcon from '../../../public/images/skills/icon/star.svg'
-import signalIcon from '../../../public/images/skills/icon/signal.svg'
-import avatar_1 from '../../../public/images/skills/avatar_1.png'
-import avatar_2 from '../../../public/images/skills/avatar_2.png'
-import avatar_3 from '../../../public/images/skills/avatar_3.png'
-import avatar_4 from '../../../public/images/skills/avatar_4.png'
+import Image from 'next/image'
 import AvatarGroup from '@/components/shared/AvatarGroup'
 interface CourseCardProps {
   title: string
   creator: string
-  image: StaticImageData
+  image: string
   rating: number
   lessons: string
   duration: string
@@ -29,6 +23,9 @@ const CourseCard = ({
   level,
   price
 }: CourseCardProps) => {
+  const starIcon = '/images/skills/icon/star.svg'
+  const signalIcon = '/images/skills/icon/signal.svg'
+
   return (
     <article className='group w-full rounded-3xl bg-white border border-neutral-200 p-4 transition-shadow duration-200 hover:shadow-lg'>
       {/* Image */}
@@ -65,6 +62,8 @@ const CourseCard = ({
             <Image
               src={starIcon}
               alt='icon'
+              width={24}
+              height={24}
             />
           </div>
         </div>
@@ -81,6 +80,8 @@ const CourseCard = ({
             <Image
               src={signalIcon}
               alt='signal'
+              width={24}
+              height={20}
             />
 
             <span>{level}</span>
@@ -97,7 +98,12 @@ const CourseCard = ({
               ))} */}
 
               <AvatarGroup
-                avatarArray={[avatar_1, avatar_2, avatar_3, avatar_4]}
+                avatarArray={[
+                  '/images/skills/avatar_1.png',
+                  '/images/skills/avatar_2.png',
+                  '/images/skills/avatar_3.png',
+                  '/images/skills/avatar_4.png'
+                ]}
                 count='26'
               />
 

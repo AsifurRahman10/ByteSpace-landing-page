@@ -1,28 +1,19 @@
 import { Navbar } from '../layout/Navbar'
-import searchImage from '../../../public/images/hero/icon/search.svg'
-import humanImage from '../../../public/images/hero/human.png'
 import Image from 'next/image'
 import Button from '@/components/shared/Button'
-import ellipse7 from '../../../public/images/hero/Ellipse_7.png'
-import frame from '../../../public/images/hero/Frame.png'
-import frame2 from '../../../public/images/hero/Frame_2.svg'
-import frame3 from '../../../public/images/hero/Frame_3.png'
-import cone from '../../../public/images/hero/Cone.svg'
-import coneWhite from '../../../public/images/hero/Cone_white.png'
-import triangle from '../../../public/images/hero/triangle.svg'
 import HappyStudentCard from '@/components/shared/HappyStudentCard'
 import LearningCard from '@/components/shared/LearningCard'
 
 const HeroPage = () => {
   return (
-    <div className='relative isolate flex h-fit sm:h-dvh flex-col overflow-hidden bg-brand-blue hero-grid'>
+    <div className='relative isolate flex h-fit md:h-[60vh] lg:h-dvh flex-col overflow-hidden bg-brand-blue hero-grid'>
       <Navbar />
 
       {/* banner content */}
 
       <section className='relative flex-none md:flex-1'>
-        <div className='relative z-10 px-5 ms:pt-[clamp(1rem,5vh,2.5rem)]  '>
-          <h1 className='mx-auto mt-6 sm:mt-p sm:pt-8 sm:max-w-4xl text-center text-3xl sm:text-[clamp(2.5rem,5.2vw,4.5rem)] leading-[1.05] font-semibold text-background'>
+        <div className='relative z-10 px-5 sm:pt-[clamp(1rem,5vh,2.5rem)]  '>
+          <h1 className='mx-auto mt-6 sm:pt-8 sm:max-w-4xl text-center text-3xl sm:text-[clamp(2.5rem,5.2vw,4.5rem)] leading-[1.05] font-semibold text-background'>
             Get Access to Hundreds Courses Available
           </h1>
 
@@ -36,7 +27,7 @@ const HeroPage = () => {
             {/* Search input */}
             <div className='flex min-w-0 flex-1 items-center rounded-3xl bg-white px-4 py-[clamp(0.65rem,1.5vh,0.9rem)] sm:px-6'>
               <Image
-                src={searchImage}
+                src='/images/hero/icon/search.svg'
                 alt='Search'
                 width={22}
                 height={22}
@@ -51,12 +42,12 @@ const HeroPage = () => {
             </div>
 
             {/* Search button */}
-            <Button text='Search  ' />
+            <Button className='self-stretch'>Search</Button>
           </div>
         </div>
 
         <Image
-          src={frame}
+          src='/images/hero/Frame.png'
           alt=''
           aria-hidden='true'
           width={267}
@@ -64,7 +55,7 @@ const HeroPage = () => {
           className='pointer-events-none absolute left-[-1.5vw] top-[18%] z-0 hidden h-auto w-[clamp(7.5rem,15vw,17rem)] max-w-none select-none md:block'
         />
         <Image
-          src={frame2}
+          src='/images/hero/Frame_2.svg'
           alt=''
           aria-hidden='true'
           width={177}
@@ -72,7 +63,7 @@ const HeroPage = () => {
           className='pointer-events-none absolute left-[14%] top-[43%] z-0 hidden h-auto w-[clamp(5rem,8vw,9rem)] max-w-none select-none md:block'
         />
         <Image
-          src={triangle}
+          src='/images/hero/triangle.svg'
           alt=''
           aria-hidden='true'
           width={180}
@@ -80,7 +71,7 @@ const HeroPage = () => {
           className='pointer-events-none absolute right-[10%] z-0 hidden h-auto  max-w-none select-none md:block'
         />
         <Image
-          src={frame3}
+          src='/images/hero/Frame_3.png'
           alt=''
           aria-hidden='true'
           width={317}
@@ -104,8 +95,8 @@ const HeroPage = () => {
               md:block
   '
           style={{
-            maskImage: `url(${cone.src})`,
-            WebkitMaskImage: `url(${cone.src})`,
+            maskImage: "url('/images/hero/Cone.svg')",
+            WebkitMaskImage: "url('/images/hero/Cone.svg')",
             maskRepeat: 'no-repeat',
             WebkitMaskRepeat: 'no-repeat',
             maskPosition: 'center',
@@ -115,7 +106,7 @@ const HeroPage = () => {
           }}
         />
         <Image
-          src={coneWhite}
+          src='/images/hero/Cone_white.png'
           alt=''
           aria-hidden='true'
           width={346}
@@ -126,29 +117,29 @@ const HeroPage = () => {
         <div className='pointer-events-none relative sm:mt-8 h-40 w-full md:absolute md:inset-x-0 md:bottom-0 md:mt-0 md:h-[min(42vh,24rem)]'>
           {/* Green background ellipse */}
           <Image
-            src={ellipse7}
+            src='/images/hero/Ellipse_7.png'
             alt=''
             width={1149}
             height={442}
             className='absolute bottom-0 left-1/2 h-auto w-[min(80vw,115.5vh)] max-w-none -translate-x-1/2'
           />
-          <div className='bg-background absolute w-fit p-4 left-1/3 rounded-xl hidden sm:block'>
+          <div className='bg-background absolute w-fit p-4 left-1/3 rounded-xl hidden lg:block'>
             <p className='font-medium'>UI/UX Design</p>
             <p className='text-neutral-950 text-xs'>
               200 Courses • 1000+ Students
             </p>
           </div>
 
-          <div className='absolute left-2/6 z-50 bottom-12 hidden sm:block'>
+          <div className='absolute left-2/6 z-50 bottom-12 hidden lg:block'>
             <HappyStudentCard />
           </div>
-          <div className='absolute right-[32%] -top-20 hidden sm:block'>
+          <div className='absolute right-[32%] -top-20 hidden lg:block'>
             <LearningCard />
           </div>
 
           {/* Human */}
           <Image
-            src={humanImage}
+            src='/images/hero/human.png'
             width={722}
             height={515}
             alt='smiling human'

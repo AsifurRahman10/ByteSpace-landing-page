@@ -1,36 +1,30 @@
-import designIcon from '../../../public/images/learning/design.svg'
-import developmentIcon from '../../../public/images/learning/development.svg'
-import softwareIcon from '../../../public/images/learning/computer.svg'
-import businessIcon from '../../../public/images/learning/business.svg'
-import marketingIcon from '../../../public/images/learning/marketing.svg'
-import photographyIcon from '../../../public/images/learning/photography.svg'
-import Image, { StaticImageData } from 'next/image'
+import Image from 'next/image'
 
 export const LearningPath = () => {
   const categories = [
     {
       title: 'Design',
-      icon: designIcon
+      icon: '/images/learning/design.svg'
     },
     {
       title: 'Development',
-      icon: developmentIcon
+      icon: '/images/learning/development.svg'
     },
     {
       title: 'IT & Software',
-      icon: softwareIcon
+      icon: '/images/learning/computer.svg'
     },
     {
       title: 'Business',
-      icon: businessIcon
+      icon: '/images/learning/business.svg'
     },
     {
       title: 'Marketing',
-      icon: marketingIcon
+      icon: '/images/learning/marketing.svg'
     },
     {
       title: 'Photography',
-      icon: photographyIcon
+      icon: '/images/learning/photography.svg'
     }
   ]
   return (
@@ -63,7 +57,7 @@ export const LearningPath = () => {
 
 interface CategoryCardProps {
   title: string
-  icon: StaticImageData
+  icon: string
 }
 
 const CategoryCard = ({ title, icon }: CategoryCardProps) => {

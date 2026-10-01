@@ -1,7 +1,7 @@
-import Image, { StaticImageData } from 'next/image'
+import Image from 'next/image'
 
 type AvatarGroupProps = {
-  avatarArray: StaticImageData[]
+  avatarArray: string[]
   count: string
 }
 

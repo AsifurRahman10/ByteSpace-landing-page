@@ -1,12 +1,4 @@
-import starIcon from '../../../public/images/skills/icon/star.svg'
 import AvatarGroup from '@/components/shared/AvatarGroup'
-import avatar_1 from '../../../public/images/feature/avatar_1.png'
-import avatar_2 from '../../../public/images/skills/avatar_1.png'
-import avatar_3 from '../../../public/images/feature/avatar_2.png'
-import avatar_4 from '../../../public/images/feature/avatar_3.png'
-import avatar_5 from '../../../public/images/feature/avatar_4.png'
-import avatar_6 from '../../../public/images/feature/avatar_5.png'
-import avatar_7 from '../../../public/images/feature/avatar_6.png'
 
 const HappyStudentCard = ({ bgColor }: { bgColor?: string }) => {
   return (
@@ -22,8 +14,8 @@ const HappyStudentCard = ({ bgColor }: { bgColor?: string }) => {
         <div
           className='w-4 h-4 bg-[#D4FB20]'
           style={{
-            maskImage: `url(${starIcon.src})`,
-            WebkitMaskImage: `url(${starIcon.src})`,
+            maskImage: 'url(/images/skills/icon/star.svg)',
+            WebkitMaskImage: 'url(/images/skills/icon/star.svg)',
             maskSize: 'contain',
             WebkitMaskSize: 'contain',
             maskRepeat: 'no-repeat',
@@ -36,13 +28,13 @@ const HappyStudentCard = ({ bgColor }: { bgColor?: string }) => {
 
       <AvatarGroup
         avatarArray={[
-          avatar_1,
-          avatar_2,
-          avatar_3,
-          avatar_4,
-          avatar_5,
-          avatar_6,
-          avatar_7
+          '/images/feature/avatar_1.png',
+          '/images/skills/avatar_1.png',
+          '/images/feature/avatar_2.png',
+          '/images/feature/avatar_3.png',
+          '/images/feature/avatar_4.png',
+          '/images/feature/avatar_5.png',
+          '/images/feature/avatar_6.png'
         ]}
         count='2K+'
       />

@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import logoBlack from '../../../public/images/hero/logo_black.png'
 import Button from '@/components/shared/Button'
 
 const linkColumns = [
@@ -42,7 +41,7 @@ const Footer = () => {
           {/* LEFT — BRAND + NEWSLETTER */}
           <div className='flex w-full max-w-126 flex-col'>
             <Image
-              src={logoBlack}
+              src='/images/hero/logo_black.png'
               alt='ByteSpace'
               width={172}
               height={36}
@@ -62,7 +61,7 @@ const Footer = () => {
                 className='h-13 w-full rounded-full border border-neutral-300 bg-transparent px-6 text-base outline-none placeholder:text-neutral-700 focus:border-secondary sm:w-94'
               />
 
-              <Button text='Search' />
+              <Button type='submit'>Subscribe</Button>
             </form>
 
             <p className='mt-4 max-w-117.5 text-xs leading-4.75 '>
@@ -95,7 +94,7 @@ const Footer = () => {
 
         {/* BOTTOM BAR */}
         <div className='flex flex-col items-start justify-between gap-4 border-t border-neutral-200 py-6 sm:flex-row sm:items-center'>
-          <p className='text-xs '>@ 2023 ByteSpace. All rights reserved.</p>
+          <p className='text-xs '>© 2023 ByteSpace. All rights reserved.</p>
 
           <ul className='flex flex-wrap items-center gap-x-6 gap-y-2'>
             {legalLinks.map((link) => (
