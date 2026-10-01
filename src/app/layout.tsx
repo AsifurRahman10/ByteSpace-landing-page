@@ -41,7 +41,7 @@ export default function RootLayout({
       <body className='flex min-h-dvh flex-col bg-background font-sans text-foreground antialiased'>
         <a
           href='#main-content'
-          className='sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:rounded-full focus:bg-secondary focus:px-5 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-secondary-foreground'>
+          className='sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-60 focus:rounded-full focus:bg-secondary focus:px-5 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-secondary-foreground'>
           Skip to content
         </a>
 
