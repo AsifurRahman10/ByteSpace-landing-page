@@ -2,15 +2,12 @@ import Image from 'next/image'
 import CourseCard from '@/components/shared/Card'
 import HappyStudentCard from '@/components/shared/HappyStudentCard'
 import { courses } from '../../../public/dummyData/skillsData'
-import triangle from '../../../public/images/hero/triangle.svg'
-import frame_2 from '../../../public/images/hero/Frame_2.svg'
-import coneYellow from '../../../public/images/hero/Cone_yellow.svg'
 
 const [backCourse, frontCourse] = [courses[1], courses[2]]
 
 const triangleMask = {
-  maskImage: `url(${triangle.src})`,
-  WebkitMaskImage: `url(${triangle.src})`,
+  maskImage: `url(/images/hero/triangle.svg)`,
+  WebkitMaskImage: `url(/images/hero/triangle.svg)`,
   maskRepeat: 'no-repeat',
   WebkitMaskRepeat: 'no-repeat',
   maskPosition: 'center',
@@ -45,7 +42,7 @@ const AuthShowcase = () => {
       </div>
 
       <Image
-        src={coneYellow}
+        src='/images/hero/Cone_yellow.svg'
         alt=''
         width={145}
         height={145}
@@ -53,7 +50,7 @@ const AuthShowcase = () => {
       />
 
       <Image
-        src={frame_2}
+        src='/images/hero/Frame_2.svg'
         alt=''
         width={175}
         height={175}

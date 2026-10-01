@@ -1,4 +1,4 @@
-import type { Viewport } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Poppins } from 'next/font/google'
 
 import './globals.css'
@@ -14,6 +14,13 @@ export const viewport: Viewport = {
   initialScale: 1,
   colorScheme: 'light',
   themeColor: '#ffffff'
+}
+
+export const metadata: Metadata = {
+  title: 'Home | ByteSpace',
+  icons: {
+    icon: '/images/auth/logo_sm.png'
+  }
 }
 
 export default function RootLayout({

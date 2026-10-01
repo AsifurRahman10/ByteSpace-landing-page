@@ -5,7 +5,6 @@ import Link from 'next/link'
 
 import { Logo } from '@/components/layout/logo'
 import Image from 'next/image'
-import bagIcon from '../../../public/images/hero/icon/shopping_bag.svg'
 
 const focusRing =
   'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue'
@@ -73,7 +72,7 @@ export function Navbar() {
           })}
 
           <Image
-            src={bagIcon}
+            src='/images/hero/icon/shopping_bag.svg'
             alt='Shopping bag'
             width={24}
             height={24}
@@ -128,7 +127,7 @@ export function Navbar() {
               onClick={() => setIsMenuOpen(false)}
               className={`flex items-center gap-3 rounded-lg px-3 py-3 text-base font-medium text-foreground transition-colors hover:bg-neutral-50 ${focusRing}`}>
               <Image
-                src={bagIcon}
+                src='/images/hero/icon/shopping_bag.svg'
                 alt='Shopping bag'
                 width={24}
                 height={24}

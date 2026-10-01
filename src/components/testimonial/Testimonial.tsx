@@ -1,27 +1,24 @@
 import Image from 'next/image'
-import sarah from '../../../public/images/skills/avatar_3.png'
-import james from '../../../public/images/testimonials/avatar_2.png'
-import alex from '../../../public/images/testimonials/avatar_3.png'
 
 const testimonials = [
   {
     name: 'Sarah M.',
     role: 'Enthusiastic Learner',
-    image: sarah,
+    image: '/images/skills/avatar_3.png',
     quote:
       '"ByteSpace has transformed my approach to learning. The diverse range of courses and the quality of content provided by creators have exceeded my expectations. The platform truly fosters a sense of community and lifelong learning."'
   },
   {
     name: 'James L.',
     role: 'Lifelong Learner',
-    image: james,
+    image: '/images/testimonials/avatar_2.png',
     quote:
       '"I\'ve tried several online learning platforms, and ByteSpace stands out for its vibrant community and the variety of courses available. The easy navigation and engaging content make it a go-to platform for continuous skill development."'
   },
   {
     name: 'Alex B.',
     role: 'Inspired Creator',
-    image: alex,
+    image: '/images/testimonials/avatar_3.png',
     quote:
       '"As a creator, ByteSpace has been a game-changer for me. The Course Editor is user-friendly, and the support from the community is incredible. It\'s fulfilling to see my courses making a positive impact on learners globally."'
   }
@@ -56,13 +53,17 @@ const TestimonialSection = () => {
         </div>
 
         {/* CARDS */}
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-start gap-10'>
+        <div className='grid grid-cols-1 items-stretch gap-10 sm:grid-cols-2 md:grid-cols-3'>
           {testimonials.map((item, index) => (
             <div
               key={item.name}
               className={`
-        flex flex-col rounded-3xl bg-white p-6
-        ${index === testimonials.length - 1 ? 'sm:col-span-2 sm:mx-auto sm:w-1/2 md:col-span-1 md:mx-0 md:w-full' : ''}
+        flex h-full flex-col rounded-3xl bg-white p-6
+        ${
+          index === testimonials.length - 1
+            ? 'sm:col-span-2 sm:mx-auto sm:w-1/2 md:col-span-1 md:mx-0 md:w-full'
+            : ''
+        }
       `}>
               <Image
                 src={item.image}

@@ -1,16 +1,9 @@
-import skill1 from '../images/skills/skill1.jpg'
-import skill2 from '../images/skills/skill2.jpg'
-import skill3 from '../images/skills/skill3.jpg'
-import skill4 from '../images/skills/skill4.jpg'
-import skill5 from '../images/skills/skill5.jpg'
-import skill6 from '../images/skills/skill6.jpg'
-
 export const courses = [
   {
     id: 1,
     title: 'Learn Figma from Basic',
     creator: 'purepearl studio',
-    image: skill1,
+    image: '/images/skills/skill1.jpg',
     rating: 4.5,
     lessons: '17 Lessons',
     duration: '2 hours 16 mins',
@@ -22,7 +15,7 @@ export const courses = [
     id: 2,
     title: 'Build Digital Asset',
     creator: 'purepearl studio',
-    image: skill2,
+    image: '/images/skills/skill2.jpg',
     rating: 4.5,
     lessons: '17 Lessons',
     duration: '2 hours 16 mins',
@@ -34,7 +27,7 @@ export const courses = [
     id: 3,
     title: 'the Power of Big Data',
     creator: 'purepearl studio',
-    image: skill3,
+    image: '/images/skills/skill3.jpg',
     rating: 4.5,
     lessons: '17 Lessons',
     duration: '2 hours 16 mins',
@@ -46,7 +39,7 @@ export const courses = [
     id: 4,
     title: 'Balancing Productivity and Self-Care',
     creator: 'purepearl studio',
-    image: skill4,
+    image: '/images/skills/skill4.jpg',
     rating: 4.5,
     lessons: '17 Lessons',
     duration: '2 hours 16 mins',
@@ -58,7 +51,7 @@ export const courses = [
     id: 5,
     title: 'Mastering Money Management',
     creator: 'purepearl studio',
-    image: skill5,
+    image: '/images/skills/skill5.jpg',
     rating: 4.5,
     lessons: '17 Lessons',
     duration: '2 hours 16 mins',
@@ -70,7 +63,7 @@ export const courses = [
     id: 6,
     title: 'From Idea to Startup Success',
     creator: 'purepearl studio',
-    image: skill6,
+    image: '/images/skills/skill6.jpg',
     rating: 4.5,
     lessons: '17 Lessons',
     duration: '2 hours 16 mins',

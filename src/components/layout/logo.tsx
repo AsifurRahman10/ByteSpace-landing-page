@@ -1,7 +1,6 @@
 import Link from 'next/link'
 
 import Image from 'next/image'
-import LogoImage from '../../../public/images/hero/Header_Logo.png'
 
 type LogoProps = {
   href?: string
@@ -15,7 +14,7 @@ export function Logo({ href = '/', className }: LogoProps) {
       aria-label={`ByteSpace — home`}
       className={`group inline-flex items-center gap-2.5 rounded-md ${className ?? ''}`}>
       <Image
-        src={LogoImage}
+        src='/images/hero/Header_Logo.png'
         alt='Brand logo'
         width={171}
         height={37}

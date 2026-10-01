@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import logoBlack from '../../../public/images/hero/logo_black.png'
 import Button from '@/components/shared/Button'
 
 const linkColumns = [
@@ -42,7 +41,7 @@ const Footer = () => {
           {/* LEFT — BRAND + NEWSLETTER */}
           <div className='flex w-full max-w-126 flex-col'>
             <Image
-              src={logoBlack}
+              src='/images/hero/logo_black.png'
               alt='ByteSpace'
               width={172}
               height={36}

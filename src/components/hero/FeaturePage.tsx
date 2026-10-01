@@ -1,15 +1,11 @@
 import CourseCard from '@/components/shared/Card'
 import { courses } from '../../../public/dummyData/skillsData'
 import Image from 'next/image'
-import humanImage from '../../../public/images/hero/human.png'
 import LearningCard from '@/components/shared/LearningCard'
-import girlImage from '../../../public/images/feature/girl.png'
 import HappyStudentCard from '@/components/shared/HappyStudentCard'
-import checkCircle from '../../../public/images/feature/icon/check.svg'
-import frame_1 from '../../../public/images/feature/frame_1.png'
-// import frame_2 from '../../../public/images/feature/frame_2.png'
+// import frame_2 from '/images/feature/frame_2.png'
 
-import frame_2 from '../../../public/images/feature/Frame.svg'
+import frame_2 from '/images/feature/Frame.svg'
 
 const FeaturePage = () => {
   return (
@@ -94,7 +90,7 @@ const FeaturePage = () => {
               <CourseCard {...courses[0]} />
             </div>
             <Image
-              src={frame_1}
+              src='/images/feature/frame_1.png'
               alt='shape_1'
               width={170}
               height={170}
@@ -103,7 +99,7 @@ const FeaturePage = () => {
 
             {/* Human - MIDDLE */}
             <Image
-              src={humanImage}
+              src='/images/hero/human.png'
               alt='human-image'
               width={550}
               height={510}
@@ -149,7 +145,7 @@ const FeaturePage = () => {
                   className='flex items-center gap-2'>
                   <Image
                     alt='check'
-                    src={checkCircle}
+                    src='/images/feature/icon/check.svg'
                     width={18}
                     height={18}
                   />
@@ -164,17 +160,20 @@ const FeaturePage = () => {
           <div className='relative flex-1 shrink-0'>
             {/* Girl */}
             <Image
-              src={girlImage}
+              src='/images/feature/girl.png'
               alt='girl-image'
               width={435}
+              height={515}
               priority
               className='relative left-0 z-40 -mb-18 block max-w-full object-contain sm:left-8 lg:left-20'
             />
 
             <Image
-              src={frame_2}
+              src='/images/feature/Frame.svg'
               alt='shape_2'
-              className='absolute right-4 top-16 z-50 sm:right-10 sm:top-22 lg:right-20'
+              width={170}
+              height={170}
+              className='absolute right-4 top-16 z-50 sm:right-10 sm:top-22 lg:right-15'
             />
 
             {/* Revenue card */}

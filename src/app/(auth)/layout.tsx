@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import logo from '../../../public/images/auth/logo_sm.png'
 
 const AuthLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -11,7 +10,7 @@ const AuthLayout = ({ children }: { children: React.ReactNode }) => {
           aria-label='Home'
           className='absolute top-6'>
           <Image
-            src={logo}
+            src='/images/auth/logo_sm.png'
             alt='ByteSpace'
             width={30}
             height={30}
