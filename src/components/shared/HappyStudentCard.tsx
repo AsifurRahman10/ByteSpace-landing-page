@@ -29,12 +29,12 @@ const HappyStudentCard = ({ bgColor }: { bgColor?: string }) => {
       <AvatarGroup
         avatarArray={[
           '/images/feature/avatar_1.png',
+          '/images/skills/avatar_1.png',
           '/images/feature/avatar_2.png',
           '/images/feature/avatar_3.png',
           '/images/feature/avatar_4.png',
           '/images/feature/avatar_5.png',
-          '/images/feature/avatar_6.png',
-          '/images/feature/avatar_7.png'
+          '/images/feature/avatar_6.png'
         ]}
         count='2K+'
       />

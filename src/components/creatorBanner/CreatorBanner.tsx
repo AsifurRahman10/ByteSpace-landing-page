@@ -89,7 +89,7 @@ const CreatorBanner = () => {
           course on the ByteSpace Course Library.
         </p>
         <div className='mt-7 flex justify-center sm:mt-10'>
-          <Button text='Join as Creator' />
+          <Button>Join as Creator</Button>
         </div>
       </div>
     </section>

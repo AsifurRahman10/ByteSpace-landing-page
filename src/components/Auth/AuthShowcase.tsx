@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import CourseCard from '@/components/shared/Card'
 import HappyStudentCard from '@/components/shared/HappyStudentCard'
-import { courses } from '../../../public/dummyData/skillsData'
+import { courses } from '../../dummyData/skillsData'
 
 const [backCourse, frontCourse] = [courses[1], courses[2]]
 

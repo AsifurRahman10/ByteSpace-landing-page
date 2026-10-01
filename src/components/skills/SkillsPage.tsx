@@ -2,7 +2,7 @@
 import { useState } from 'react'
 
 import CourseCard from '@/components/shared/Card'
-import { courses } from '../../../public/dummyData/skillsData'
+import { courses } from '../../dummyData/skillsData'
 
 const SkillsPage = () => {
   const categories = [
@@ -78,7 +78,7 @@ const SkillsPage = () => {
 
       {/* card section */}
 
-      <section className='px-5 oy-6 sm:py-16 container-page'>
+      <section className='px-5 py-6 sm:py-16 container-page'>
         <div className='grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3'>
           {courses.map((course) => (
             <CourseCard

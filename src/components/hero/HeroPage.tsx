@@ -12,8 +12,8 @@ const HeroPage = () => {
       {/* banner content */}
 
       <section className='relative flex-none md:flex-1'>
-        <div className='relative z-10 px-5 ms:pt-[clamp(1rem,5vh,2.5rem)]  '>
-          <h1 className='mx-auto mt-6 sm:mt-p sm:pt-8 sm:max-w-4xl text-center text-3xl sm:text-[clamp(2.5rem,5.2vw,4.5rem)] leading-[1.05] font-semibold text-background'>
+        <div className='relative z-10 px-5 sm:pt-[clamp(1rem,5vh,2.5rem)]  '>
+          <h1 className='mx-auto mt-6 sm:pt-8 sm:max-w-4xl text-center text-3xl sm:text-[clamp(2.5rem,5.2vw,4.5rem)] leading-[1.05] font-semibold text-background'>
             Get Access to Hundreds Courses Available
           </h1>
 
@@ -42,7 +42,7 @@ const HeroPage = () => {
             </div>
 
             {/* Search button */}
-            <Button text='Search  ' />
+            <Button className='self-stretch'>Search</Button>
           </div>
         </div>
 

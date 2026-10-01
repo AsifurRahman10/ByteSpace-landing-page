@@ -1,9 +1,8 @@
 import CourseCard from '@/components/shared/Card'
-import { courses } from '../../../public/dummyData/skillsData'
+import { courses } from '../../dummyData/skillsData'
 import Image from 'next/image'
 import LearningCard from '@/components/shared/LearningCard'
 import HappyStudentCard from '@/components/shared/HappyStudentCard'
-// import frame_2 from '/images/feature/frame_2.png'
 
 import frame_2 from '/images/feature/Frame.svg'
 
