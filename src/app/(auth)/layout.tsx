@@ -1,5 +1,11 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  description:
+    'Sign in to ByteSpace to keep learning, or create a free account to start exploring hundreds of courses.'
+}
 
 const AuthLayout = ({ children }: { children: React.ReactNode }) => {
   return (

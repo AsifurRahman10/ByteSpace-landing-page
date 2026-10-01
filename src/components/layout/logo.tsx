@@ -18,7 +18,7 @@ export function Logo({ href = '/', className }: LogoProps) {
         alt='Brand logo'
         width={171}
         height={37}
-        className='h-auto w-[140px] lg:w-[171px]'
+        className='h-auto w-35 lg:w-42.75'
       />
     </Link>
   )

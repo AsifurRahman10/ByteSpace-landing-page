@@ -17,7 +17,12 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: 'Home | ByteSpace',
+  title: {
+    default: 'ByteSpace',
+    template: '%s | ByteSpace'
+  },
+  description:
+    'ByteSpace is a place to learn new skills and share what you know — explore hundreds of courses or publish your own.',
   icons: {
     icon: '/images/auth/logo_sm.png'
   }
